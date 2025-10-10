@@ -3,8 +3,8 @@ session_start();
 require_once 'vendor/autoload.php';
 
 $client = new Google_Client();
-$client->setClientId('585810817063-e1ogpj0bu6kjo5fml3uumfgcj2emac8c.apps.googleusercontent.com');
-$client->setClientSecret('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');
+$client->setClientId('');
+$client->setClientSecret('');
 $client->setRedirectUri('http://localhost/Learn/google-callback.php');
 $client->addScope("email");
 $client->addScope("profile");
@@ -63,6 +63,7 @@ if (isset($_GET['code'])) {
     header('Location: login.php');
     exit;
 }
+
 
 
 ?>
